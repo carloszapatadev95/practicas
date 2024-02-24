@@ -105,7 +105,7 @@ const Sumar_mul_2 = () => {
  // impares; al final deberá indicar su sumatoria. 
 
  const Sumar_mul_impares= () => {
-    let h = parseInt(prompt("ingrese los numeros a sumar"));
+    let h = parseInt(prompt("ingrese el valor de = 300"));
     let i = parseInt(prompt("ingrese el valor de E = cero")) ;
     if (i === 0 && h ===300) { 
         let suma = [];
@@ -134,7 +134,7 @@ const Sumar_mul_2 = () => {
             }          
          }
     }else{
-        document.querySelector("#sumar_mul_impares").innerHTML= "el numero maximo debe ser 100 y  g debe ser igual a cero";  
+        document.querySelector("#sumar_mul_impares").innerHTML= "el numero maximo debe ser 300 y  g debe ser igual a cero";  
     }
  }
  //Determinar la hipotenusa de un triángulo rectángulo conocidas las longitudes de sus dos catetos.
