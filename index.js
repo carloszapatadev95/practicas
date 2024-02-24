@@ -205,9 +205,9 @@ const Sumar_mul_2 = () => {
     let j = parseInt(prompt("ingrese el valor numerico"));
     if (j !==0) {
         if (j % 2 !== 0) {
-            document.querySelector("#par_impar").innerHTML = "el numero es impar "+ j;
+            document.querySelector("#par_impar").innerHTML = " impar "+ j;
         } else {
-            document.querySelector("#par_impar").innerHTML = "el numero es par " + j; 
+            document.querySelector("#par_impar").innerHTML = " par " + j; 
         }
         console.log(j);
        
