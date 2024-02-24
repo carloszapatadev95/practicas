@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css" integrity="sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Practicas de diagrama de flujo</title>
+</head>
+<body >
+    <h1>Practicas de diagrama de flujo</h1>
+    <div class="fs-4 text-danger" >valor de a es: <spam id="valor_a">  </spam></div> <br>
+    <div class="fs-4 text-danger" >valor de b es: <spam id="valor_b">  </spam></div> <br>
+    <div class="fs-4 text-danger" >valor de c es: <spam id="valor_c">  </spam></div> <br>
+    <div class="fs-4 text-danger" >los valores son: <spam id="resultado"></spam> El mayor es: <spam id="mayor"  > </spam></div><br> 
+    <div class="fs-4 text-danger" >El menor es: <spam id="menor"  > </spam></div> <br>
+    <div class="fs-4 text-danger" >La suma de todos los valores es: <spam id="sumar"  > </spam></div> <br>
+    <button class="btn btn-primary" type="button" onclick="Mayor_menor()" >Numero mayor/Menor </button><br><br>
+   
+    <h2>suma de 10 numeros </h2><br>
+    <div class="fs-4 text-danger" >La suma de los 10 numeros es: <spam id="sumar_10"  > </spam></div> <br>
+    <button class="btn btn-primary" type="button" onclick="Sumar()" >sumar</button><br><br>
+
+    <h2>suma de  numeros multiplos de 5 </h2><br>
+    <div class="fs-4 text-danger" >Los multiplos de 5 son: <spam id="sumar_mul_5"  > </spam></div> <br>
+    <div class="fs-4 text-danger" >La suma de los multiplos de 5 total es: <spam id="sumar_mul_5_1"  > </spam></div> <br>
+    <button class="btn btn-primary" type="button" onclick="Sumar_mul_5()" >sumar multiplos de 5</button><br><br>
+
+    <h2>suma de  numeros multiplos pares </h2><br>
+    <div class="fs-4 text-danger" >los multiplos de pares son: <spam id="sumar_mul_2"  > </spam></div> <br>
+    <div class="fs-4 text-danger" >La suma de los multiplos pares total es: <spam id="sumar_mul_2_1"  > </spam></div> <br>
+    <button class="btn btn-primary" type="button" onclick="Sumar_mul_2()" >sumar multiplos pares</button><br><br>
+
+    <h2>suma de  numeros multiplos impares </h2><br>
+    <div class="fs-4 text-danger" >los multiplos impares son: <spam id="sumar_mul_impares"  > </spam></div> <br>
+    <div class="fs-4 text-danger" >La suma de los multiplos impares total es: <spam id="sumar_mul_impares_1"  > </spam></div> <br>
+    <button class="btn btn-primary" type="button" onclick="Sumar_mul_impares()" >sumar multiplos impares</button><br><br>
+
+    <h2>Calcular la hipotenusa</h2><br>
+    <div class="fs-4 text-danger" >La hipotenusa es: <spam id="hipotenusa"  > </spam></div> <br>
+    <button class="btn btn-primary" type="button" onclick="Hipotenusa()" >Hipotenusa</button><br><br>
+    
+    <h2>Calcular el area de un cuadrado</h2><br>
+    <div class="fs-4 text-danger" >el area es: <spam id="cuadrado"  > </spam></div> <br>
+    <button class="btn btn-primary" type="button" onclick="Cuadrado()" >area</button><br><br>
+    
+    <h2>Calcular el area y volumen de un cilindro</h2><br>
+    <div class="fs-4 text-danger" >el area es: <spam id="area"  > </spam> y su volumen es: <spam id="volumen"  > </spam></div> <br>
+    <button class="btn btn-primary" type="button" onclick="Area_volumen()" >Volumen</button><br><br>
+    
+
+    <h2>Calcular el area de un rectangulo</h2><br>
+    <div class="fs-4 text-danger" >el area es: <spam id="rectangulo"  > </spam></div> <br>
+    <button class="btn btn-primary" type="button" onclick="Rectangulo()" >rectangulo</button><br><br>
+
+    <h2>Se determina si numero es par o impar</h2><br>
+    <div class="fs-4 text-danger" >el numero es : <spam id="par_impar"  > </spam></div> <br>
+    <button class="btn btn-primary" type="button" onclick="Numero_par_impar()" >par/impar</button><br><br>
+
+    <h2>Se determina lista posiciones</h2><br>
+    <div class="fs-4 text-danger" >el numero es : <spam id="par_impar"  > </spam></div> <br>
+    <button class="btn btn-primary" type="button" onclick="Numero_par_impar()" >Lista</button><br><br>
+
+    <script src="index.js"></script>
+</body>
+</html>
