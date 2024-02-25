@@ -59,17 +59,18 @@ const Sumar = () => {
     let d = parseInt(prompt("ingrese los numeros a sumar"));
     let e = parseInt(prompt("ingrese el valor de E = cero")) ;
     if (e === 0 && d ===100) { 
-        let suma = 0;
+        let suma = [];
         let suma1 = 0;
         for (let i = 5; i <= d; i += 5) {
-               suma += i + "";
-               suma1 +=i;
-            console.log("suma de multiplos de 5",suma);
-            console.log("suma de multiplos de 5 total",suma1);
-            if (suma >= d) {
+              suma.push(i); 
+              suma1 += i;
+          
+            console.log("los multiplos de 5:",suma);
+            console.log("suma de multiplos de 5 total:",suma1);
+    
                 document.querySelector("#sumar_mul_5").innerHTML= suma;   
                 document.querySelector("#sumar_mul_5_1").innerHTML= suma1;   
-            }          
+                    
          }
     }else{
         document.querySelector("#sumar_mul_5").innerHTML= "el numero maximo debe ser 100 y  E debe ser igual a cero";  
@@ -83,19 +84,19 @@ const Sumar_mul_2 = () => {
     let f = parseInt(prompt("ingrese los numeros a sumar"));
     let g = parseInt(prompt("ingrese el valor de E = cero")) ;
     if (g === 0 && f ===100) { 
-        let suma = 0;
+        let suma = [];
         let suma1= 0;
         for (let i = 2; i <= f; i += 2) {
-               suma += i + "";
+               suma.push(i);
             
                suma1 += i;
     
             console.log("los multiplos de 2:",suma);
             console.log("suma de multiplos de 2 total:",suma1);
-            if (suma >= f) {
+            
                 document.querySelector("#sumar_mul_2").innerHTML= suma;   
                 document.querySelector("#sumar_mul_2_1").innerHTML= suma1;   
-            }          
+                    
          }
     }else{
         document.querySelector("#sumar_mul_2").innerHTML= "el numero maximo debe ser 100 y  g debe ser igual a cero";  
@@ -221,11 +222,41 @@ const Sumar_mul_2 = () => {
   //b.3. ¿Cuántos menores de 30?
   //El algoritmo debe finalizar cuando n (el total de números de la lista), sea igual a 0. 
   const Lista_numeros = () => {
-    let a = parseInt(prompt("ingrese el valor de la lista:"));
-    let b = parseInt(prompt("ingrese valor igual a cero"));
+    let a = parseInt(prompt("ingrese el maximo valor de la lista: "));
+    let b = parseInt(prompt("ingrese el minim valor de la lista"));
 
     if (a === 100 && b === 0) {
+        let numeros = [];
+        let numeros_1 = [];
+        let numeros_2 = [];
+       
+        for (let i = 50; i <= 75; i ++) {
+            numeros.push(i);
+            console.log(numeros);           
+        }
+        for (let i = 80; i <= a; i++) {
+            numeros_1.push(i);
+            console.log(numeros_1);   
+            
+        }
+        for (let i = 1; i < 30; i++) {
+          
+            let ver =   numeros_2.push(i);
+            console.log(ver);   
+            
+        }
+        let numeros_total = (  numeros_1.length + numeros.length + numeros_2.length -2) ;
+        if (numeros_total === 74) {
+            document.querySelector("#lista_3").innerHTML = 0 + " Fin del algoritmo";
+        }else{
+            document.querySelector("#lista_3").innerHTML = "la suma no es igual a cero";
+        }
+        console.log("la suma total es:",numeros_total);
+        document.querySelector("#lista").innerHTML = numeros.length -1;
+        document.querySelector("#lista_1").innerHTML = numeros_1.length -1;
+        document.querySelector("#lista_2").innerHTML = numeros_2.length;
         
+        //document.querySelector("#lista_3").innerHTML = numeros_total;
     } else {
 
         document.querySelector("#lista").innerHTML = "lista de ser 100 y 0"
