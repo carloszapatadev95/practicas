@@ -1,4 +1,5 @@
-console.log('Practicas de diagrama de flujo');
+console.log('Practicas de diagrama de flujo hola');
+
 //  1 Desarrolle un algoritmo que permita leer dos valores distintos, determinar cual de los dos valores es el
 //mayor y escribirlo. 
 
@@ -264,3 +265,41 @@ const Sumar_mul_2 = () => {
 
   }
 
+const abecedario = {
+    "a": 97,
+    "b": 98,
+    "c": 99,
+    "d": 100,
+    "e": 101,
+    "f": 102,
+    "g": 103,
+    "h": 104,
+    "i": 105,
+    "j": 106,
+    "k": 107,
+    "l": 108,
+    "m": 109,
+    "n": 110,
+    "o": 111,
+    "p": 112,
+    "q": 113,
+    "r": 114,
+    "s": 115,
+    "t": 116,
+    "u": 117,
+    "v": 118,
+    "w": 119,
+    "x": 120,
+    "y": 121,
+    "z": 122
+}
+
+ const Abc = () => {
+   
+const letra = "a";
+const valorAscii = abecedario[letra];
+console.log(`El valor ASCII de '${letra}' es ${valorAscii}`);
+console.log(JSON.stringify(abecedario), j);
+
+ }
+ Abc();

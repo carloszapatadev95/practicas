@@ -1,6 +1,9 @@
+.h1_1 {
+  color: red !important;
+}
+
 * {
   text-align: center;
-  color: rgb(83, 78, 78);
 }
 
 .ss {
