@@ -1,5 +1,5 @@
 console.log('Practicas de diagrama de flujo hola');
-
+console.log('hoja');
 //  1 Desarrolle un algoritmo que permita leer dos valores distintos, determinar cual de los dos valores es el
 //mayor y escribirlo. 
 
@@ -243,7 +243,8 @@ const Sumar_mul_2 = () => {
         for (let i = 1; i < 30; i++) {
           
             let ver =   numeros_2.push(i);
-            console.log(ver);   
+            console.log(ver);  
+            console.log(JSON.stringify(abecedario[0])); 
             
         }
         let numeros_total = (  numeros_1.length + numeros.length + numeros_2.length -2) ;
