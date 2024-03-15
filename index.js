@@ -1,5 +1,4 @@
 console.log('Practicas de diagrama de flujo hola');
-console.log('hoja');
 //  1 Desarrolle un algoritmo que permita leer dos valores distintos, determinar cual de los dos valores es el
 //mayor y escribirlo. 
 
@@ -15,7 +14,7 @@ document.querySelector("#valor_c").innerHTML= c;
 
 let inicial = "iguales vuelva a ingresar valor";
 let inicial1 = "distintos cual es mayor";
-if (a === b && a === c || b === c || a===c) {
+if (a === b || a === c || b === c ) {
     document.querySelector("#resultado").innerHTML= inicial ;
 }else{
     if (a !== b && a !==c || b !== c) {
@@ -244,7 +243,6 @@ const Sumar_mul_2 = () => {
           
             let ver =   numeros_2.push(i);
             console.log(ver);  
-            console.log(JSON.stringify(abecedario[0])); 
             
         }
         let numeros_total = (  numeros_1.length + numeros.length + numeros_2.length -2) ;
@@ -266,41 +264,60 @@ const Sumar_mul_2 = () => {
 
   }
 
-const abecedario = {
-    "a": 97,
-    "b": 98,
-    "c": 99,
-    "d": 100,
-    "e": 101,
-    "f": 102,
-    "g": 103,
-    "h": 104,
-    "i": 105,
-    "j": 106,
-    "k": 107,
-    "l": 108,
-    "m": 109,
-    "n": 110,
-    "o": 111,
-    "p": 112,
-    "q": 113,
-    "r": 114,
-    "s": 115,
-    "t": 116,
-    "u": 117,
-    "v": 118,
-    "w": 119,
-    "x": 120,
-    "y": 121,
-    "z": 122
-}
-
  const Abc = () => {
    
-const letra = "a";
-const valorAscii = abecedario[letra];
-console.log(`El valor ASCII de '${letra}' es ${valorAscii}`);
-console.log(JSON.stringify(abecedario), j);
+const letra = prompt('ingrese caracter');
+if (letra == null) {
+    document.querySelector("#caracter").innerHTML =' no ingreso caracter';
+}else if (letra === letra.toLowerCase()) {
+    //const caracter = letra.toLowerCase()
+    console.log('letra minuscula', letra);
+    document.querySelector("#caracter").innerHTML = letra + ' en minuscula';
+} else if(letra === letra.toUpperCase()) {
+    //const caracter1 = letra.toUpperCase()
+    console.log('letra mayuscula', letra);
+    document.querySelector("#caracter").innerHTML = letra + ' en mayuscula';
+}
+
+let valor_decimal = letra.charCodeAt(0);
+document.querySelector("#decimal").innerHTML = valor_decimal;
+console.log('valor decimal', valor_decimal);
+let valor_hexadecimal = valor_decimal.toString(16);
+document.querySelector("#hexadecimal").innerHTML = valor_hexadecimal;
+console.log( 'valor hexadecimal',valor_hexadecimal);
+let valor_optal = valor_decimal.toString(8)
+console.log('valor optal',  valor_optal);
+document.querySelector("#optal").innerHTML = valor_optal;
+let valor_binario = valor_decimal.toString(2);
+console.log( 'valor binario' ,valor_binario);
+document.querySelector("#binario").innerHTML = valor_binario;
+
+//esta es otra manera de optener el valor binario de un decimal
+//let decimal = parseInt(prompt('ingresa el valor numerico:'))
+//let residuos = [];
+//
+//while (decimal > 0) {
+//    residuos.push(decimal % 2);
+//    decimal = Math.floor(decimal/2);
+//}
+//let binario1 = residuos.reverse().join("");
+//console.log('valor binario del decimal aregado ',binario1);
 
  }
- Abc();
+// Desarrolle un algoritmo que permita convertir calificaciones numéricas, según la siguiente tabla:
+// A = 19 y 20, B =16, 17 y 18, C = 13, 14 y 15, D = 10, 11 y 12, E = 1 hasta el 9. Se asume que la nota está
+//comprendida entre 1 y 20. 
+const Notas = () => {
+    let caracter = [];
+   for (let i = 0; i < 1; i++) {
+     let x = prompt('igrese caracter');
+     caracter.push(x);
+    if (caracter !== 'a' ) {
+        console.log(x);
+    } else {
+        console.log('caracte no valido');
+    }
+   }
+    
+    document.querySelector("#nota").innerHTML = caracter;
+}
