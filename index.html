@@ -18,8 +18,9 @@
     <div class="fs-4 text-danger" >valor de a es: <spam id="valor_a" class="ss" >  </spam></div> <br>
     <div class="fs-4 text-danger" >valor de b es: <spam id="valor_b" class="ss">  </spam></div> <br>
     <div class="fs-4 text-danger" >valor de c es: <spam id="valor_c"  class="ss">  </spam></div> <br>
-    <div class="fs-4 text-danger" >los valores son: <spam id="resultado" class="ss"></spam> El mayor es: <spam id="mayor"  > </spam></div><br> 
+    <div class="fs-4 text-danger" >los valores son: <spam id="resultado" class="ss"></spam> </div><br> 
     <div class="fs-4 text-danger" >El menor es: <spam id="menor"  class="ss"> </spam></div> <br>
+    <div class="fs-4 text-danger" >El mayor es: <spam id="mayor" class="ss"> </spam></div><br>
     <div class="fs-4 text-danger" >La suma de todos los valores es: <spam id="sumar" class="ss" > </spam></div> <br>
     <button class="btn btn-primary" type="button" onclick="Mayor_menor()" >Numero mayor/Menor </button><br><br>
    
@@ -79,9 +80,23 @@
     <div class="fs-4 text-danger" >el valor ascii binario: <span id="binario" class="ss" ></span> </div> <br><br>
     <button class="btn btn-primary" type="button" onclick="Abc()" >funcion Abc</button><br><br>
 
-    <h2>tabla de notas segun el caracer insertado</h2><br>
+    <h2>tabla de notas que muestra un caracte segun valor insertado</h2><br>
     <div class="fs-4 text-danger" >el caracter es: <spam class="ss" id="nota"></spam></div><br><br>
-    <button type="button" onclick="Notas()" class="btn btn-primary">notas</button>
+    <div class="fs-4 text-danger" >la nota del caracter es: <spam class="ss" id="nota_caracter"></spam></div><br><br>
+    <button type="button" onclick="Notas()" class="btn btn-primary">notas</button><br><br>
+  
+    <h2>tabla de notas que muestra un caracte segun valor insertado utilizando instruccion while</h2><br>
+    <div class="fs-4 text-danger" >el caracter es: <spam class="ss" id="notas_caracter"></spam></div><br><br>
+    <div class="fs-4 text-danger" >la nota del caracter es: <spam class="ss" id="notas_uno"></spam></div><br><br>
+    <button type="button" onclick="notas_while()" class="btn btn-primary">notas while</button><br><br>
+
+
+    <h2>tabla de notas que muestra un caracte segun valor insertado utilizando instruccion swicht/caso</h2><br>
+    <div class="fs-4 text-danger"> Elcaracter es: <span id="caso1" class="ss"></span></div><br>
+    <div class="fs-4 text-danger">la nota es: <span id="nota_del_caso1" class="ss"></span></div> <br><br>
+    <button type="button" class="btn btn-primary" onclick="notas_Swicht()"> notas caso </button><br><br>
+
+    
     <script type="text/javascript"  src="index.js"></script>
     
 </body>

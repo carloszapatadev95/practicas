@@ -12,10 +12,12 @@ document.querySelector("#valor_b").innerHTML= b;
 let c = parseInt(prompt("ingrese valor de c"));
 document.querySelector("#valor_c").innerHTML= c;
 
-let inicial = "iguales vuelva a ingresar valor";
-let inicial1 = "distintos cual es mayor";
+
+let inicial1 = "distintos";
+
 if (a === b || a === c || b === c ) {
-    document.querySelector("#resultado").innerHTML= inicial ;
+    console.log('jodete');
+   document.querySelector("#resultado").innerHTML = ' iguales en 2 de las variables';
 }else{
     if (a !== b && a !==c || b !== c) {
         document.querySelector("#resultado").innerHTML= inicial1;
@@ -39,8 +41,8 @@ if (a === b || a === c || b === c ) {
 //es decir, 1 + 2 + 3 + …. + 10. 
 
 const Sumar = () => {
-    let d = parseInt(prompt("ingrese el valor D a sumar "));
-    let e = parseInt(prompt("ingrese el valor de E = cero")) ;
+    let d = parseInt(prompt("ingrese el valor debe ser = 10"));
+    let e = parseInt(prompt("ingrese el valor debe ser = 0")) ;
     if (e === 0 && d === 10) { 
         let suma=0;
         for (let i = 1; i <= d; i++) {
@@ -81,8 +83,8 @@ const Sumar = () => {
 // y el 100, es decir, 2 + 4 + 6 +…. + 100. El programa deberá imprimir los números en cuestión y
 // finalmente su sumatoria
 const Sumar_mul_2 = () => {
-    let f = parseInt(prompt("ingrese los numeros a sumar"));
-    let g = parseInt(prompt("ingrese el valor de E = cero")) ;
+    let f = parseInt(prompt("ingrese el numeros maximo a sumar = 100"));
+    let g = parseInt(prompt("ingrese el valor de E = 0")) ;
     if (g === 0 && f ===100) { 
         let suma = [];
         let suma1= 0;
@@ -107,7 +109,7 @@ const Sumar_mul_2 = () => {
 
  const Sumar_mul_impares= () => {
     let h = parseInt(prompt("ingrese el valor de = 300"));
-    let i = parseInt(prompt("ingrese el valor de E = cero")) ;
+    let i = parseInt(prompt("ingrese el valor de E = 0")) ;
     if (i === 0 && h ===300) { 
         let suma = [];
         let suma1 = 0;
@@ -141,7 +143,7 @@ const Sumar_mul_2 = () => {
  //Determinar la hipotenusa de un triángulo rectángulo conocidas las longitudes de sus dos catetos.
  //Desarrolle el algoritmo correspondiente.
  const Hipotenusa = () => {
-    let d = parseInt(prompt("ingrese el valor del catet A:"));
+    let d = parseInt(prompt("ingrese el valor del cateto A:"));
     let e = parseInt(prompt("ingrese el valor del cateto B:")) ;
     if (e !== 0 && d !== 0) { 
        let cat_a = d * d;
@@ -222,8 +224,8 @@ const Sumar_mul_2 = () => {
   //b.3. ¿Cuántos menores de 30?
   //El algoritmo debe finalizar cuando n (el total de números de la lista), sea igual a 0. 
   const Lista_numeros = () => {
-    let a = parseInt(prompt("ingrese el maximo valor de la lista: "));
-    let b = parseInt(prompt("ingrese el minim valor de la lista"));
+    let a = parseInt(prompt("ingrese el maximo valor de la lista = 100: "));
+    let b = parseInt(prompt("ingrese el minimo valor de la lista = 0"));
 
     if (a === 100 && b === 0) {
         let numeros = [];
@@ -259,7 +261,7 @@ const Sumar_mul_2 = () => {
         //document.querySelector("#lista_3").innerHTML = numeros_total;
     } else {
 
-        document.querySelector("#lista").innerHTML = "lista de ser 100 y 0"
+        document.querySelector("#lista").innerHTML = "los valores de la lista son incorrectos"
     }
 
   }
@@ -302,22 +304,154 @@ document.querySelector("#binario").innerHTML = valor_binario;
 //}
 //let binario1 = residuos.reverse().join("");
 //console.log('valor binario del decimal aregado ',binario1);
+let valor_hexadecimal0 = prompt('ingrese el valor hexadecimal');
+ let valor_decimal1 = parseInt(valor_hexadecimal0, 16);
+ console.log('el valor decimal es: ', valor_decimal1);
+    
 
  }
 // Desarrolle un algoritmo que permita convertir calificaciones numéricas, según la siguiente tabla:
 // A = 19 y 20, B =16, 17 y 18, C = 13, 14 y 15, D = 10, 11 y 12, E = 1 hasta el 9. Se asume que la nota está
 //comprendida entre 1 y 20. 
+//Realiza el mismo algoritmo utilizando Mientras (While); también hazlo utilizando En Caso (Case)
 const Notas = () => {
-    let caracter = [];
-   for (let i = 0; i < 1; i++) {
-     let x = prompt('igrese caracter');
-     caracter.push(x);
-    if (caracter !== 'a' ) {
-        console.log(x);
-    } else {
-        console.log('caracte no valido');
-    }
-   }
+    let caracter = ['A','B','C','D','E'];
+    let x = parseInt(prompt('las notas van desde el 0 hasta el 20'));
     
-    document.querySelector("#nota").innerHTML = caracter;
+  
+    if (x === 19 || x === 20) {
+           
+        document.querySelector("#nota").innerHTML = caracter[0];
+        document.querySelector("#nota_caracter").innerHTML = x;
+    } else if (x === 16 || x === 17 || x ===18)  {
+           
+        document.querySelector("#nota").innerHTML = caracter[1];
+        document.querySelector("#nota_caracter").innerHTML = x;
+    }else if (x === 13 || x === 14 || x ===15)  {
+           
+        document.querySelector("#nota").innerHTML = caracter[2];
+        document.querySelector("#nota_caracter").innerHTML = x;
+    }else if (x === 10 || x === 11 || x ===12)  {
+           
+        document.querySelector("#nota").innerHTML = caracter[3];
+        document.querySelector("#nota_caracter").innerHTML = x;
+    }else if (x <= 9)  {
+           
+        document.querySelector("#nota").innerHTML = caracter[4];
+        document.querySelector("#nota_caracter").innerHTML = x;
+    }
+
+     else {
+        document.querySelector("#nota").innerHTML = 'caracter invalido';
+    }
+ 
+    
+   
+}
+// Desarrolle un algoritmo que permita convertir calificaciones numéricas, según la siguiente tabla:
+// A = 19 y 20, B =16, 17 y 18, C = 13, 14 y 15, D = 10, 11 y 12, E = 1 hasta el 9. Se asume que la nota está
+//comprendida entre 1 y 20. 
+//Realiza el mismo algoritmo utilizando Mientras (While); también hazlo utilizando En Caso (Case)
+const notas_while = () => {
+    let caracter = ['A','B','C','D','E'];
+    let notas = parseInt(prompt('ingresa valor'));
+
+    if (!notas || notas >= 21) {
+        document.querySelector("#notas_uno").innerHTML = 'caracter u valor incorrecto';
+    } else {
+    while (notas > 0) {
+           notas--;
+          let notas_uno = notas
+           if (notas === 20||notas === 19 || notas === 18) {
+            console.log('valor conseguido',notas_uno);
+            document.querySelector("#notas_caracter").innerHTML = caracter[0];
+            document.querySelector("#notas_uno").innerHTML = notas_uno + 1;
+            break;
+           } else if (notas === 17 ||notas ===  16 || notas === 15) {
+            console.log('valor conseguido',notas_uno);
+            document.querySelector("#notas_caracter").innerHTML = caracter[1];
+            document.querySelector("#notas_uno").innerHTML = notas_uno + 1;
+            break;
+           }else if (notas === 14 || notas === 13 || notas === 12) {
+            console.log('valor conseguido',notas_uno);
+            document.querySelector("#notas_caracter").innerHTML = caracter[2];
+            document.querySelector("#notas_uno").innerHTML = notas_uno +1;
+            break;
+           }else if (notas === 11 || notas === 10 || notas === 9) {
+            console.log('valor conseguido',notas_uno);
+            document.querySelector("#notas_caracter").innerHTML = caracter[3];
+            document.querySelector("#notas_uno").innerHTML = notas_uno +1;
+            break;
+           }else{
+            if (notas <= 8) {
+                
+                console.log('valor conseguido',notas_uno);
+                document.querySelector("#notas_caracter").innerHTML = caracter[4];
+                document.querySelector("#notas_uno").innerHTML = notas_uno + 1;
+                break;
+                
+            }
+           }
+       
+           
+        
+    } 
+   
+    }
+}
+const notas_Swicht = () => {
+    let caracter1 = ['A','B','C','D','E'];
+    let nota_swicht = parseInt(prompt('ingrese la nota'))
+
+    switch (nota_swicht) {
+        case 19:
+        case 20:
+            console.log(nota_swicht);
+            document.querySelector("#caso1").innerHTML = caracter1[0];
+            document.querySelector("#nota_del_caso1").innerHTML = nota_swicht;
+            
+            break;
+            case 16:
+            case 17:
+            case 18:    
+                    console.log(nota_swicht);
+                document.querySelector("#caso1").innerHTML = caracter1[1];
+                document.querySelector("#nota_del_caso1").innerHTML = nota_swicht;
+        
+                
+            break
+            case 13:
+            case 14:
+            case 15:
+                    console.log(nota_swicht);
+                    document.querySelector("#caso1").innerHTML = caracter1[2];
+                    document.querySelector("#nota_del_caso").innerHTML = nota_swicht;
+            break;
+            case 10:
+            case 11:
+            case 12:
+                console.log(nota_swicht);
+                document.querySelector("#caso1").innerHTML = caracter1[3];
+                document.querySelector("#nota_del_caso1").innerHTML = nota_swicht;
+        break;
+        case 9:
+        case 8:
+        case 7:
+        case 6:
+        case 5:
+        case 4:
+        case 3:
+        case 2:
+        case 1:
+            console.log(nota_swicht);
+            document.querySelector("#caso1").innerHTML = caracter1[4];
+            document.querySelector("#nota_del_caso1").innerHTML = nota_swicht;
+    break;
+        default:
+            console.log(nota_swicht);
+                document.querySelector("#caso1").innerHTML = 'caracter u valor incorrecto';
+               
+            break;
+    
+  }   
 }
