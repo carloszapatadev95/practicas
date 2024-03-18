@@ -58,7 +58,7 @@ const Sumar = () => {
 }
 //sumatoria mutiplos de 5
 const Sumar_mul_5 = () => {
-    let d = parseInt(prompt("ingrese los numeros a sumar"));
+    let d = parseInt(prompt("ingrese los numeros a sumar = 100"));
     let e = parseInt(prompt("ingrese el valor de E = cero"));
     if (e === 0 && d === 100) {
         let suma = [];
@@ -448,13 +448,11 @@ const notas_Swicht = () => {
         default:
             console.log(nota_swicht);
             document.querySelector("#caso1").innerHTML = 'caracter u valor incorrecto';
-
             break;
 
     }
 }
 //Desarrolle un algoritmo que permita leer dos números y ordenarlos de menor a mayor, si es el caso. 
-
 const Ordenar_mayor_menor = () => {
     let a = parseInt(prompt('ingrese el primer valor'));
     let b = parseInt(prompt('ingrese el segundo valor'));
@@ -477,3 +475,77 @@ const Ordenar_mayor_menor = () => {
         }
     }
 }
+
+//Desarrolle un algoritmo que permita realizar la escritura de los primeros 100 números naturales
+//utilizando la estructura Mientras (While).
+const Escribir_numeros = () => {
+    let a = parseInt(prompt('ingrese el numero 0'));
+    
+    if ( a >=1 ) {
+        console.log('los datos no son correctos');
+        document.querySelector("#numeros_cien").innerHTML= 'los datos no son correctos';
+    } else {
+        let num = [];
+        while (a < 100 ) {
+            a++;            
+            num.push(a);
+            console.log(num);
+            document.querySelector("#numeros_cien").innerHTML = num;           
+         
+        }
+    }
+}
+
+//Desarrolle un algoritmo que permita leer un valor entero positivo N y determinar si es primo o no
+
+const positivo_primo = () => {
+    let a = parseInt(prompt('ingrese el valordel numero'));
+    if (!a) {
+        console.log('datos no es validor');
+        document.querySelector("#positivo_primo").innerHTML = 'datos no es valido';
+    } else {
+       for (let i = 2; i <= a; i++) {
+                   //console.log('barrido',i);
+                   let j= a / i;
+                   let j1= i;
+                  // j1.push(j);
+                // console.log( Number.isInteger(j), j);
+                 //console.log('resultado de la division es:',a, '/', i, '=', j);
+             if ( j === 5 || j === 3 || j === 2) {
+                console.log('respuesta no es primo:',a,'/' ,i,'=', j);
+                document.querySelector("#positivo_primo").innerHTML = a + ' no es primo';
+                break;
+             } else if(a === i) {
+                console.log('el numero es primo:',i,'=', a);
+                document.querySelector("#positivo_primo").innerHTML = a + ' es primo';
+             }
+         }
+    }
+}
+//determinar los 20 primeros numeros y cuales son multiplos de 2
+const multiplos_dos_de_veinte = () => {
+    let a = parseInt(prompt('ingrese valor = 100'));
+    if (a !== 100) {
+        console.log('datos no son validos');
+        document.querySelector("#multiplos").innerHTML = 'datos no son validos';
+    } else {
+         while (a >= 0) {
+            a--;
+            let num2 = [];
+            let num3 = [];
+         for (let i = 0; i < 20; i++) {
+            
+            console.log('los 20' ,i +1);
+            num2.push(i+1);
+            num3.push(i*2);
+            console.log('multiplode 2 son:',num3);
+          }
+
+           console.log(a);
+           document.querySelector("#multiplos").innerHTML = num2;
+           document.querySelector("#multiplos1").innerHTML = num3;
+   }
+ }
+}
+
+
